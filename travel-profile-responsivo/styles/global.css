@@ -1,0 +1,92 @@
+*, 
+*::before,
+*::after {
+      box-sizing: border-box;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      font: inherit;
+
+      --webkit-font-smoothing: antialiased;
+      --moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+      /* Cores */
+
+      --brand-color: #ef5f4c;
+      --background-color: #fff;
+      --surface-color: #f5f5f5;
+      --skeleton-color: #d9d9d9;
+      --shape-transparency: #ffffff8f;
+
+      --text-color-primary: #313131;
+      --text-color-secondary: #6c6c6c;
+
+      /* Tipografia */
+
+      --font-family-sans: 'Poppins', system-ui, sans-serif;
+
+      --font-weight-regular: 400;
+      --font-weight-bold: 800;
+
+      --font-size-small: .75rem;
+      --font-size-medium: .875rem;
+      --font-size-large: 1.5rem;
+
+      /* Espaçamentos */
+
+      --padding-block-small: 1rem;
+      --padding-inline-small: 1rem;
+
+      --padding-block-medium: 2rem;
+      --padding-inline-medium: 2rem;
+
+
+}
+
+html {
+      font-family: var(--font-family-sans);
+      font-weight: var(--font-weight-regular);
+}
+
+body {
+      background-color: var(--background-color);
+}
+
+h1 {
+      font-size: var(--font-size-large);
+      line-height: 125%;
+      font-weight: var(--font-weight-bold);
+}
+
+p {
+      line-height: 170%;
+}
+
+a {
+      text-decoration: none;
+      color: inherit;
+}
+
+
+@media (width >= 80em) {
+      :root {
+            --font-size-small: .875rem;
+            --font-size-medium: 1rem;
+            --font-size-large: 2rem;
+
+            --padding-block-small: 1.25rem;
+            --padding-inline-small: 2rem;
+            
+            --padding-block-medium: 1.5rem;
+            --padding-inline-medium: 2rem;
+
+            --padding-block-large: 2rem;
+            --padding-inline-large: 2rem;
+      }
+}
+

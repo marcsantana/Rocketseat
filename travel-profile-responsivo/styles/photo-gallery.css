@@ -1,0 +1,22 @@
+#photo-gallery {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .card-photo img {
+            width: 100%;
+            height: 100%;
+      }
+}
+
+@media (width >= 80em) {
+      #photo-gallery {
+            flex-direction: row;
+            gap: 1.5rem;
+
+            .card-photo img {
+                  width: 17.875rem;
+                  height: 17.875rem;
+            }
+      }
+}

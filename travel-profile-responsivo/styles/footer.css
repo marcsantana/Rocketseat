@@ -1,0 +1,35 @@
+footer {
+      color: var(--text-color-secondary);
+      flex-direction: column;
+
+      padding-block: 1rem;
+      padding-inline: 1rem;
+
+      & > p {
+            text-align: center;
+      }
+
+      & div {
+            justify-content: center;
+            margin-top: 1rem;
+      }
+}
+
+@media (width >= 80em) {
+      footer {
+            flex-direction: row;
+
+            padding-block: 1.5rem;
+            padding-inline: 2rem;
+      
+            & > p {
+                  margin-right: auto;
+            }
+
+            & div {
+                  margin-top: 0;
+            }
+
+      }
+
+}

@@ -1,0 +1,64 @@
+/* Padding classes */
+
+.padding-block-small {
+      padding-block: var(--padding-block-small);
+}
+
+.padding-inline-small {
+      padding-inline: var(--padding-inline-small);
+}
+
+.padding-block-medium {
+      padding-block: var(--padding-block-medium);
+}
+
+.padding-inline-medium {
+      padding-inline: var(--padding-inline-medium);
+}
+
+.p-medium {
+      font-size: var(--font-size-medium);
+}
+
+.p-small {
+      font-size: var(--font-size-small);
+}
+
+.desktop-only {
+      display: none;
+}
+
+.flex {
+      display: flex;
+}
+
+.gap-1 {
+      gap: 1rem;
+}
+
+.gap-2 {
+      gap: 2rem;
+}
+
+.gap-1\.5 {
+      gap: 1.5rem;
+}
+
+.grid {
+      display: grid;
+}
+
+@media (width >= 80em) {
+      .padding-block-large {
+            padding-block: var(--padding-block-large);
+      }
+      
+      .padding-inline-large {
+            padding-inline: var(--padding-inline-large);
+      }
+
+      .desktop-only {
+            display: initial;
+      }
+}
+
