@@ -1,6 +1,46 @@
 #forms {
       background-color: var(--surface-primary);
-      max-width: 22.5rem;
+      flex-direction: column;
+      gap: var(--padding-block-large);
+
+      & input[type="checkbox"] {
+            appearance: none; /* Remove o estilo padrão do navegador */
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #ccc; /* Borda inicial */
+            border-radius: .25rem; /* Bordas arredondadas */
+            background-color: #fff; /* Fundo inicial */
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+
+      & input[type="checkbox"]:checked {
+            content: '✓';
+            background-color: var(--stroke-highlight); /* Fundo azul ao marcar */
+            border: none;
+            color: #fff; /* Cor do checkmark */
+      }
+
+      & input:focus, 
+      textarea:focus, 
+      select:focus {
+            outline: var(--stroke-highlight);
+            border: .125rem solid var(--stroke-highlight);
+            box-shadow: 1 1 .625rem var(--surface-secondary); 
+      }
+
+      & input:disabled, 
+      textarea:disabled, 
+      select:disabled {
+        background-color: #f0f0f0; /* Cor de fundo */
+        color: var(--surface-disabled); /* Cor do texto */
+        border: 1px solid var(--stroke-default); /* Cor da borda */
+        cursor: not-allowed; /* Indica que está desativado */
+      }
+
+      & label {
+            color: var(--text-secondary);
+      }
 
       & #general-commands {
             flex-direction: column;
@@ -15,6 +55,11 @@
             color: var(--text-secondary);
       }
 
+      & #header {
+            flex-direction: column;
+            gap: .5rem;
+      }
+
 
       #header p {
             color: var(--text-secondary);
@@ -23,281 +68,162 @@
             font-family: var(--poppins);
       }
 
-
-
-      form {
-            font-family: var(--poppins);
-            display: flex;
+      & form {
             flex-direction: column;
+            gap: var(--padding-block-large);
 
-            fieldset {
+            & fieldset {
                   border: none;
-            }
-
-
-            input[type=checkbox], input[type=radio] {
-                  cursor: pointer;
-            }
-
-            legend {
-                  font: var(--h4);
-                  margin-bottom: 1.5rem;
-                  color: var(--text-secondary);
-            }
-
-            label {
-                  color: var(--text-secondary);
-                  font-size: .875rem;
-                  margin-top: .25rem;
-            }
-
-            .field-48px {
-                  height: 3rem;
-                  padding: .75rem 1rem;
-                  border-radius: .5rem;
-            }
-
-            .field-120px {
-                  height: 7.5rem;
-                  padding: .75rem 1rem;
-                  border-radius: .5rem;
-            }
-
-            .field-160px {
-                  height: 10rem;
-            }
-
-            .field-birth-certificate {
-                  display: flex; /* Use flexbox for easier alignment */
-                  flex-direction: column;
-                  justify-content: center; /* Center content horizontally */
-                  align-items: center; /* Center content vertically */
-                  padding: 10px 20px;
-                  border-radius: 4px;
-                  border: 2px dashed var(--stroke-default);
-                  cursor: pointer;
-                  text-align: center;
-                  position: relative;
-                  overflow: hidden;
-                  font-size: 1rem;
-                  
-            }
-
-            .field-birth-certificate img {
-                  width: 3rem;
-                  height: 3rem;
-            }
-
-            .field-birth-certificate p {
-                  width: 9.8125rem;
-                  text-align: center;
-                  color: var(--stroke-default);
-            }
-
-            .field-birth-certificate input[type=file] {
-                  position: absolute;
-                  opacity: 0;
-                  right: 0;
-                  top: 0;
-            }
-      
-            #child-info {
-                  display: flex;
-                  flex-direction: column;
-
-            }
-
-            #address {
-                  display: flex;
-                  flex-direction: column;
                   gap: 1.5rem;
             }
 
+            & fieldset input {
+                  border-radius: .5rem;
+                  height: 3rem;
 
-            .container-flex {
+            }
+
+            & fieldset .field {
+                  border-radius: .5rem;
+                  padding-block: .75rem;
+                  padding-inline: 1rem;
+            }
+
+            & fieldset textarea {
+                  height: 7.5rem;
+            }
+
+            & #child-info, #address, #responsible-info, #matricula-info {
+                  flex-direction: column;
+            }
+            
+            & .container {
+                  flex-direction: column;
+                  gap: var(--padding-block-small);
+            }
+
+            & .form-control {
+                  flex-direction: column;
+                  max-width: 19.5rem;
+                  gap: .25rem;
+            }     
+
+            & .justify-self {
                   display: flex;
-                  flex-direction: row;
+                  flex-direction: column;
                   gap: 1.25rem;
             }
 
-            .subcontainer-flex {
-                  display: flex;
+            & #responsible-message {
+                  color: #78716C;
+            }
+
+            & .school-shift {
                   flex-direction: column;
-                  gap: .25rem;
+                  gap: 1rem;
+            }
+
+            & .container-school-shift {
+                  flex-direction: row;
+                  gap: 1rem;
+                  
+                  & .options-div {
+                        border-radius: .5rem;
+                        width: 9.25rem;
+                        height: 8rem;
+                        flex-direction: row;
+                        border: .125rem solid var(--stroke-default);
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                  }
+
+                  & .options-div input {
+                        position: absolute;
+                        top: .5rem;
+                        left: .5rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                  }
+            }
+
+            & .sports {
+                  flex-direction: column;
+                  gap: 1rem;
+
+                  & .container-sports {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 1rem;
+                  }
+
+                  & .options-div {
+                        border-radius: .5rem;
+                        width: 9.25rem;
+                        height: 8rem;
+                        flex-direction: row;
+                        border: .125rem solid var(--stroke-default);
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                  }
+
+                  & .options-div input {
+                        position: absolute;
+                        top: .5rem;
+                        left: .5rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                  }
+
+                  & .options-div label {
+                        flex-direction: column;
+                        align-items: center;
+                  }
                   
             }
 
-            .field-332px-width {
-                  width: 20.75rem;
-            }
-
-            #cep-field {
-                  display: flex;
-                  flex-direction: column;
-                  gap: .25rem;
-            }
-
-            #responsible-info {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 1.5rem;
-            }
-
-            .responsible-container-flex {
-                  display: flex;
-                  flex-direction: column;
-                  gap: .25rem;
-            }
-
-            #responsible-message {
-                  font-size: .875rem;
-                  color: var(--text-secondary);
-            }
-
-            #matricula-info {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 1.5rem;
-            }
-
-            .school-shift {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 1rem;
-            }
-
-            .school-shift-container-flex {
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-            }
-
-            .options-div {
-                  border-color: var(--stroke-default);
-                  border-radius: .5rem;
-                  width: 16rem;
-                  height: 8rem;
-
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-
-                  border: .0625rem solid var(--stroke-default);
-                  border-radius: .3125rem;
-                  cursor: pointer;
-            }
-
-            .card-256px-width-128px-height {
-                  width: 16rem;
-                  height: 8rem;
-            }
-
-            .card-120px-width-128px-height {
-                  width: 7.5rem;
-                  height: 8rem;
-            }
-
-            .options-div input[type="radio"] {
-                  width: 1.5rem;
-                  height: 1.5rem;
-                  margin-top: .5rem;
-                  margin-left: .5rem;
-            }
-
-            .options-div label {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  gap: .5rem;
-                  width: 100%;
-                  height: 100%;
-                  cursor: pointer;
-            }
-
-            .options-div input {
-                  align-self: flex-start;
-                  width: 1.5rem;
-                  margin-left: .5rem;
-                  margin-top: 0rem;
-            }
-
-            .sports {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 1rem;
-            }
-
-            .sports-options-container {
-                  display: flex;
-                  flex-direction: row;
-                  flex-wrap: wrap;
-                  gap: 1rem;
-                  width: 33rem;
-            }
-
-            #terms-accept {
-                  display: flex;
+            & #terms-accept {
                   flex-direction: row;
                   gap: .75rem;
-                  align-items: flex-start;
+                  max-width: 19.5rem;
+
+                  & input {
+                        align-self: flex-start;
+                        justify-self: flex-start;
+                  }
+
+                  & span {
+                        color: var(--text-highlight);
+                        font-weight: var(--font-weight);
+                  }
             }
 
-
-            #terms-accept input[type=checkbox] {
-                  width: 2.25rem;
-                  height: 2.25rem;
-            }
-
-            #terms-accept label {
+            & #actions {
+                  flex-direction: column;
                   font-size: 1rem;
-            }
+                  font-weight: var(--font-weight);
 
-            #terms-accept span {
-                  color: var(--text-highlight);
-                  font-weight: 600;
-            }
+                  & button {
+                        height: 3rem;
+                        padding-block: .75rem;
+                        padding-inline: 1.5rem;
+                        border-radius: .5rem;
+                        
+                  }
 
-            #actions {
-                  display: flex;
-                  flex-direction: row;
-                  gap: 1rem;
-                  justify-content: flex-end;
-            }
-
-            #actions button {
-                  padding-top: .75rem;
-                  padding-bottom: .75rem;
-                  padding-left: 1.5rem;
-                  padding-right: 1.5rem;
-                  border-radius: .5rem;
-                  width: 10.875rem;
-                  height: 3rem;
+                  & button:nth-child(1) {
+                        color: var(--text-highlight);
+                        background-color: #fff;
+                        border: .125rem solid var(--text-highlight);
+                  }
                   
-                  font-family: var(--poppins);
-                  cursor: pointer;
-
-                  &[type="button"] {
-                        background-color: var(--surface-primary);
-                        color: var(--brand-dark);
-                        border: 2px solid var(--brand-dark);
-                        font-weight: 500;
-                  }
-
-                  &[type="submit"] {
-                        background-color: var(--brand-dark);
-                        color: var(--surface-primary);
-                        font-weight: 500;
+                  & button:nth-child(2) {
+                        background-color: var(--text-highlight);
                         border: none;
+                        color: #fff;
                   }
-
-
-
-
-
-
-            }
+            } 
       
       }
 
@@ -327,7 +253,61 @@
 
       #forms {
             max-width: 41rem;
+            gap: var(--padding-block-medium);
+
+            & form {
+                  gap: var(--padding-block-medium);
+
+                  & .form-control {
+                        max-width: 33rem;
+                  }
+
+                  & .justify-self {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1.25rem;
+                  }
+
+                  & .max-width-332px {
+                        max-width: 20.75rem;
+                  }
+
+                  & .max-width-176px {
+                        max-width: 11rem;
+                  }
+
+
+                  & .container-school-shift {
+
+                        & .options-div {
+                              width: 16rem;
+                              height: 8rem;
+                        }
+                  }
+
+                  & .sports {
+      
+                        & .options-div {
+                              width: 7.5rem;
+                        }
+      
+                        
+                  }
+
+                  & #terms-accept {
+
+                        max-width: 33rem;
+
+                  }
+
+                  & #actions {
+                        flex-direction: row;
+                        justify-content: flex-end;
+
+                  }
+            }
       }
+
       #ad {
             gap: 2rem;
 

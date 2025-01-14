@@ -80,11 +80,13 @@
       
 }
 
+
 html {
       font-family: var(--poppins);
 }
 
-h1, h2, h3 {
+
+h1, h2, h3, h4 {
       line-height: 120%;
       font-weight: var(--font-weight);
       letter-spacing: -0.04em;
