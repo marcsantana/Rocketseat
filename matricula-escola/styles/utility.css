@@ -1,0 +1,30 @@
+.padding-block-small {
+      padding-block: var(--padding-block-small);
+}
+
+.padding-block-medium {
+      padding-block: var(--padding-block-medium);
+}
+
+.padding-block-large {
+      padding-block: var(--padding-block-large);
+}
+
+.padding-inline-small {
+      padding-inline: var(--padding-inline-small);
+}
+
+.flex {
+      display: flex;
+}
+
+.desktop-only {
+      display: none;
+}
+
+@media (width >= 80em) {
+      .desktop-only {
+            display: initial;
+      }
+}
+

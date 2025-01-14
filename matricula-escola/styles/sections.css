@@ -1,0 +1,369 @@
+#forms {
+      background-color: var(--surface-primary);
+      max-width: 22.5rem;
+
+      & #general-commands {
+            flex-direction: column;
+            gap: 1.5rem;
+      }
+
+      & #return > span {
+            cursor: pointer;
+            flex-direction: row;
+            gap: .5rem;
+            align-items: center;
+            color: var(--text-secondary);
+      }
+
+
+      #header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: normal;
+            font-family: var(--poppins);
+      }
+
+
+
+      form {
+            font-family: var(--poppins);
+            display: flex;
+            flex-direction: column;
+
+            fieldset {
+                  border: none;
+            }
+
+
+            input[type=checkbox], input[type=radio] {
+                  cursor: pointer;
+            }
+
+            legend {
+                  font: var(--h4);
+                  margin-bottom: 1.5rem;
+                  color: var(--text-secondary);
+            }
+
+            label {
+                  color: var(--text-secondary);
+                  font-size: .875rem;
+                  margin-top: .25rem;
+            }
+
+            .field-48px {
+                  height: 3rem;
+                  padding: .75rem 1rem;
+                  border-radius: .5rem;
+            }
+
+            .field-120px {
+                  height: 7.5rem;
+                  padding: .75rem 1rem;
+                  border-radius: .5rem;
+            }
+
+            .field-160px {
+                  height: 10rem;
+            }
+
+            .field-birth-certificate {
+                  display: flex; /* Use flexbox for easier alignment */
+                  flex-direction: column;
+                  justify-content: center; /* Center content horizontally */
+                  align-items: center; /* Center content vertically */
+                  padding: 10px 20px;
+                  border-radius: 4px;
+                  border: 2px dashed var(--stroke-default);
+                  cursor: pointer;
+                  text-align: center;
+                  position: relative;
+                  overflow: hidden;
+                  font-size: 1rem;
+                  
+            }
+
+            .field-birth-certificate img {
+                  width: 3rem;
+                  height: 3rem;
+            }
+
+            .field-birth-certificate p {
+                  width: 9.8125rem;
+                  text-align: center;
+                  color: var(--stroke-default);
+            }
+
+            .field-birth-certificate input[type=file] {
+                  position: absolute;
+                  opacity: 0;
+                  right: 0;
+                  top: 0;
+            }
+      
+            #child-info {
+                  display: flex;
+                  flex-direction: column;
+
+            }
+
+            #address {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.5rem;
+            }
+
+
+            .container-flex {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 1.25rem;
+            }
+
+            .subcontainer-flex {
+                  display: flex;
+                  flex-direction: column;
+                  gap: .25rem;
+                  
+            }
+
+            .field-332px-width {
+                  width: 20.75rem;
+            }
+
+            #cep-field {
+                  display: flex;
+                  flex-direction: column;
+                  gap: .25rem;
+            }
+
+            #responsible-info {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.5rem;
+            }
+
+            .responsible-container-flex {
+                  display: flex;
+                  flex-direction: column;
+                  gap: .25rem;
+            }
+
+            #responsible-message {
+                  font-size: .875rem;
+                  color: var(--text-secondary);
+            }
+
+            #matricula-info {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.5rem;
+            }
+
+            .school-shift {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1rem;
+            }
+
+            .school-shift-container-flex {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+            }
+
+            .options-div {
+                  border-color: var(--stroke-default);
+                  border-radius: .5rem;
+                  width: 16rem;
+                  height: 8rem;
+
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+
+                  border: .0625rem solid var(--stroke-default);
+                  border-radius: .3125rem;
+                  cursor: pointer;
+            }
+
+            .card-256px-width-128px-height {
+                  width: 16rem;
+                  height: 8rem;
+            }
+
+            .card-120px-width-128px-height {
+                  width: 7.5rem;
+                  height: 8rem;
+            }
+
+            .options-div input[type="radio"] {
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  margin-top: .5rem;
+                  margin-left: .5rem;
+            }
+
+            .options-div label {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  gap: .5rem;
+                  width: 100%;
+                  height: 100%;
+                  cursor: pointer;
+            }
+
+            .options-div input {
+                  align-self: flex-start;
+                  width: 1.5rem;
+                  margin-left: .5rem;
+                  margin-top: 0rem;
+            }
+
+            .sports {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1rem;
+            }
+
+            .sports-options-container {
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                  gap: 1rem;
+                  width: 33rem;
+            }
+
+            #terms-accept {
+                  display: flex;
+                  flex-direction: row;
+                  gap: .75rem;
+                  align-items: flex-start;
+            }
+
+
+            #terms-accept input[type=checkbox] {
+                  width: 2.25rem;
+                  height: 2.25rem;
+            }
+
+            #terms-accept label {
+                  font-size: 1rem;
+            }
+
+            #terms-accept span {
+                  color: var(--text-highlight);
+                  font-weight: 600;
+            }
+
+            #actions {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 1rem;
+                  justify-content: flex-end;
+            }
+
+            #actions button {
+                  padding-top: .75rem;
+                  padding-bottom: .75rem;
+                  padding-left: 1.5rem;
+                  padding-right: 1.5rem;
+                  border-radius: .5rem;
+                  width: 10.875rem;
+                  height: 3rem;
+                  
+                  font-family: var(--poppins);
+                  cursor: pointer;
+
+                  &[type="button"] {
+                        background-color: var(--surface-primary);
+                        color: var(--brand-dark);
+                        border: 2px solid var(--brand-dark);
+                        font-weight: 500;
+                  }
+
+                  &[type="submit"] {
+                        background-color: var(--brand-dark);
+                        color: var(--surface-primary);
+                        font-weight: 500;
+                        border: none;
+                  }
+
+
+
+
+
+
+            }
+      
+      }
+
+}
+
+
+#ad {
+      flex-direction: column;
+      gap: .75rem;
+      align-items: center;
+      background-color: var(--surface-secondary);
+
+      & > img {
+            max-width: 19.5rem;
+            max-height: 14.5rem;
+      }
+
+      & #logo {
+            align-items: center;
+            gap: .5rem;
+      }
+
+
+}
+
+@media (width >= 80em) {
+
+      #forms {
+            max-width: 41rem;
+      }
+      #ad {
+            gap: 2rem;
+
+            & > img {
+                  max-width: 31rem;
+                  max-height: 23rem;
+            }
+
+            & #text-ad-area {
+                  flex-direction: column;
+                  max-width: 31rem;
+            }
+
+            & h1 {
+                  color: var(--text-primary);
+                  margin-bottom: .5rem;
+                  margin-top: .5rem;
+            }
+      
+            & p {
+      
+                  color: var(--text-secondary);
+                  font-size: 1rem;
+                  font-weight: normal;
+                  font-family: var(--poppins);
+            }
+
+            & #logo #font-schoolbell {
+                  font-family: var(--schoolbell);
+                  color: var(--text-primary);
+                  font-size: 1.25rem;
+            }
+      
+      
+            & #orange-color {
+                  color: var(--text-highlight);
+            }
+      }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Matrícula</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schoolbell&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles/index.css">
+
+</head>
+<body>
+
+      <main class="flex">
+            <section id="forms" class="padding-block-medium padding-inline-small">
+                  <div id="general-commands" class="flex">
+                        <div id="return">
+                              <span class="flex">
+                                    <img src="assets/icons/arrow-left-02.svg" alt="">
+                                    <span>Voltar</span>
+                              </span>
+                        </div>
+                        <div id="header">
+                              <h2>Formulário de matrícula</h2>
+                              <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+                        </div>
+                  </div>
+
+                  <form action="">
+                        <fieldset id="child-info">
+                              <legend>Informações da criança</legend>
+                              
+                              <label for="name">Nome Completo</label>
+                              <input class="field-48px" type="text" id="name">
+
+                              <label for="birthday">Data de nascimento</label>
+                              <input class="field-48px" type="date" name="" id="birthday">
+
+                              <label for="sex">Sexo</label>
+                              <select class="field-48px" name="sex" id="sex">
+                                    <option value="masculine">Masculino</option>
+                                    <option value="feminine">Feminino</option>
+                              </select>
+
+                              <label for="medic-info">Informações médicas</label>
+                              <textarea class="field-120px" name="medic-info" id="medic-info"></textarea>
+
+                              
+                              <label for="birth-certificate">Certidão de nascimento</label>
+                              <label class="field-birth-certificate field-160px" for="birth-certificate">
+                                    <img src="assets/icons/cloud-upload.svg" alt="">
+                                    <p>Clique aqui para selecionar arquivos</p>
+                                    <input type="file" name="birth-certificate" id="birth-certificate">
+                              </label>
+
+
+                        </fieldset>
+
+                        <fieldset id="address">
+                              <legend>Endereço residencial</legend>
+
+                              <div id="cep-field" class="container-flex">
+                                    <label for="cep">CEP</label>
+                                    <input class="field-48px" type="text" pattern="\d{5}-?\d{3}/">
+                              </div>
+
+                              <div class="container-flex">
+                                    <div class="subcontainer-flex">
+                                          <label for="street">Rua</label>
+                                          <input class="field-48px field-332px-width" type="text">
+                                    </div>
+                                    
+                                    <div class="subcontainer-flex">
+                                          <label for="street-number">Número</label>
+                                          <input class="field-48px" type="text" name="street-number" id="street-number">
+                                    </div>
+                              </div>
+
+                              <div class="container-flex">
+                                    <div class="subcontainer-flex">
+                                          <label for="city">Cidade</label>
+                                          <input class="field-48px field-332px-width"  type="text" name="city" id="city">
+                                    </div>
+                                    
+                                    <div class="subcontainer-flex">
+                                          <label for="state">Estado</label>
+                                          <input class="field-48px" type="text" name="state" id="state">
+                                    </div>
+                              </div>
+
+                        </fieldset>
+
+                        <fieldset id="responsible-info">
+                              <legend>Informações do responsável</legend>
+
+                              <div class="responsible-container-flex">
+                                    <label for="responsible-name">Nome do responsável</label>
+                                    <input type="text" id="responsible-name" class="field-48px">
+                                    <p id="responsible-message">Principal responsável legal e contato de emergência.</p>
+                              </div>
+
+                              <div class="responsible-container-flex">
+                                    <label for="telephone">Telefone</label>
+                                    <input type="tel" name="telephone" id="telephone" class="field-48px">
+                              </div>
+
+                              <div class="responsible-container-flex">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" name="email" id="email" class="field-48px">
+                              </div>
+
+                        </fieldset>
+
+                        <fieldset id="matricula-info">
+                              <legend>Opções de matrícula</legend>
+
+                              <section class="school-shift">
+                                    <label for="school-shift">Selecione o turno de estudo</label>
+                                    
+                                    <div class="school-shift-container-flex">
+                                          <div class="options-div card-256px-width-128px-height">
+                                                <input type="radio" name="school-shift" id="morning">
+                                                <label for="morning">
+                                                      <img src="assets/icons/sun-cloud-02.svg" alt="">
+                                                      <p>Manhã</p>
+                                                </label>
+                                          </div>
+                                          <div class="options-div card-256px-width-128px-height">
+                                                <input type="radio" name="school-shift" id="afternoon">
+                                                <label for="afternoon">
+                                                      <img src="assets/icons/sun-02.svg" alt="">
+                                                      <p>Tarde</p>
+                                                </label>
+                                          </div>
+                                    </div>
+                              </section>
+
+                              <section class="sports">
+                                    <label for="sport">Em qual esporte você gostaria de inscrever seu filho?</label>
+                                    
+                                    <div class="sports-options-container">
+                                          <div class="options-div card-120px-width-128px-height">
+                                                <input type="radio" name="sport" id="soccer">
+                                                <label for="soccer">
+                                                      <img src="assets/icons/football.svg" alt="">
+                                                      <p>Futebol</p>
+                                                </label>
+                                          </div>
+                                          
+                                          <div class="options-div card-120px-width-128px-height">
+                                                <input type="radio" name="sport" id="basketball">
+                                                <label for="basketball">
+                                                      <img src="assets/icons/basketball-02.svg" alt="">
+                                                      <p>Basquete</p>
+                                                </label>
+                                          </div>
+                                          
+                                          <div class="options-div card-120px-width-128px-height">
+                                                <input type="radio" name="sport" id="swimming">
+                                                <label for="swimming">
+                                                      <img src="assets/icons/swimming.svg" alt="">
+                                                      <p>Natação</p>
+                                                </label>
+                                          </div>
+                                          
+                                          <div class="options-div card-120px-width-128px-height">
+                                                <input type="radio" name="sport" id="yoga">
+                                                <label for="yoga">
+                                                      <img src="assets/icons/yoga-02.svg" alt="">
+                                                      <p>Yoga</p>
+                                                </label>
+                                          </div>
+                                          
+                                          <div class="options-div card-120px-width-128px-height">
+                                                <input type="radio" name="sport" id="volley">
+                                                <label for="volleyball">
+                                                      <img src="assets/icons/volleyball.svg" alt="">
+                                                      <p>Vôlei</p>
+                                                </label>
+                                          </div>
+                                          
+                                          <div class="options-div card-120px-width-128px-height">
+                                                <input type="radio" name="sport" id="box">
+                                                <label for="box">
+                                                      <img src="assets/icons/boxing-glove-01.svg" alt="">
+                                                      <p>Box</p>
+                                                </label>
+                                          </div>
+                                    </div>
+                              </section>
+                        </fieldset>
+
+                        <fieldset id="terms-accept">
+                              <input type="checkbox" id="terms" name="terms">
+                              <label for="terms">Declaro que li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span> da escola Estrela do Amanhã. </label>
+                        </fieldset>
+
+                        <fieldset id="actions">
+                              <button type="button">Salvar respostas</button>
+                              <button type="submit">Fazer matrícula</button>
+                        </fieldset>
+                  </form>
+            </section>
+
+            <section id="ad" class="flex padding-inline-small padding-block-medium">
+                  <div id="text-ad-area" class="flex">
+                        
+                        <div id="logo" class="flex">
+                              <img src="assets/icons/star.svg" alt="">
+                              <span id="font-schoolbell">Estrelas do Amanhã</span>
+                        </div>
+
+                        <h1 class="desktop-only">Porque cada momento de <span id="orange-color">aprendizado</span> conta</h1>
+                        <p class="desktop-only">Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+
+                  </div>
+                  <img src="assets/images/Illustration.png" alt="">
+            </section>
+      </main>
+      
+</body>
+</html>

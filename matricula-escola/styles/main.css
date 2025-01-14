@@ -1,0 +1,25 @@
+main {
+      flex-direction: column;
+
+      & #ad {
+            order: 0;
+      }
+
+      & #forms {
+            order: 2;
+      }
+}
+
+@media (width >= 80em) {
+      main {
+            flex-direction: row;
+
+            & #ad {
+                  order: 0;
+            }
+      
+            & #forms {
+                  order: 0;
+            }
+      }
+}
