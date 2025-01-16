@@ -1,0 +1,48 @@
+main {
+      flex-direction: column;
+      gap: 2.75rem;
+      padding-inline: 2rem;
+      margin-top: 2.125rem;
+
+      & #main-information {
+            flex-direction: column;
+      }
+
+      & #main-information a {
+            text-decoration: none;
+            color: var(--color-brand);
+      }
+
+      & #item-add form {
+            flex-direction: column;
+      }
+
+      & #item-add input {
+            height: 2.75rem;
+            padding-inline: 1.125rem;
+            padding-block: .6875rem;
+            border-radius: .75rem;
+            border: .0625rem solid var(--border-primary);
+      }
+
+      & #item-add button {
+            background-color: var(--color-brand);
+            color: var(--always-white);
+            border: none;
+            border-radius: .75rem;
+            text-align: center;
+            font-weight: bold;
+            padding-block: .75rem;
+      }
+}
+
+
+@media (width >= 80em) {
+      main {
+            margin-top: 3.875rem;
+
+            & #item-add form {
+                  flex-direction: row;
+            }
+      }
+}
