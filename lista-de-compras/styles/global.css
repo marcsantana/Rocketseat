@@ -58,8 +58,18 @@ html {
       font-family: var(--font-family);
 }
 
+body {
+      background-color: var(--background-primary);
+}
+
 h1 {
       font-size: var(--font-size-title);
       line-height: var(--line-height-title);
       font-weight: var(--font-weight-title);
+}
+
+p {
+      font-size: var(--font-size-paragraph);
+      line-height: var(--line-height-paragraph);
+      font-weight: var(--font-weight-paragraph);
 }
