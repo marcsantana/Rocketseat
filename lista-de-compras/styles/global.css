@@ -73,3 +73,9 @@ p {
       line-height: var(--line-height-paragraph);
       font-weight: var(--font-weight-paragraph);
 }
+
+label {
+      font-size: var(--font-size-label);
+      line-height: var(--line-height-label);
+      font-weight: var(--font-weight-label);
+}
