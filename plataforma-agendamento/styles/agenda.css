@@ -1,0 +1,70 @@
+#agenda {
+
+      gap: 2rem;
+
+      & > header {
+            max-width: 42.625rem;
+            gap: .75rem;
+      }
+
+      & #title h1 {
+            color: var(--gray-100);
+      }
+
+      & #title p {
+            color: var(--gray-300);
+      }
+
+      & .data-input input {
+            padding: .75rem;
+            gap: .5rem;
+
+            width: 9.5rem;
+            height: 3rem;
+
+            background-color: var(--gray-800);
+
+            color: var(--gray-200);
+      }
+
+      & > ul {
+            gap: .75rem;
+
+            & > ul {
+
+                  padding: 0rem;
+
+
+                  border: .0625rem solid var(--gray-600);
+                  border-radius: .5rem;
+
+
+                  & header {
+                        gap: .75rem;
+                        align-items: center;
+                        padding-inline: 1.25rem;
+                        padding-block: .75rem;
+                  }
+
+                  & header div {
+                        gap: .75rem;
+                        margin-right: auto;
+
+                        & p {
+                              color: var(--gray-300);
+                        }
+                  }
+
+                  & > div {
+
+                        padding: 1.25rem;
+                        gap: 2px;
+
+                        width: 682px;
+                        height: 72px;
+
+                        border: 1px solid var(--gray-600);
+                  }
+            }
+      }
+}

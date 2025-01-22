@@ -1,0 +1,43 @@
+.title-lg {
+      font: var(--title-lg);
+}
+
+.title-md {
+      font: var(--title-md);
+}
+
+.title-sm {
+      font: var(--title-sm);
+}
+
+.text-md {
+      font: var(--text-md);
+}
+
+.text-sm {
+      font: var(--text-sm);
+}
+
+.padding-block-lg {
+      padding-block: var(--padding-block-lg);
+}
+
+.padding-inline-lg {
+      padding-inline: var(--padding-inline-lg);
+}
+
+.padding-inline-md {
+      padding-inline: var(--padding-inline-md);
+}
+
+.flex {
+      display: flex;
+}
+
+.flex-column {
+      flex-direction: column;
+}
+
+.flex-row {
+      flex-direction: row;
+}

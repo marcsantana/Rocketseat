@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <title>Plataforma de Agendamento</title>
+      <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+      <div id="app-name">
+            <img src="assets/icons/logo.svg" alt="Logo">
+      </div>
+
+      <div id="container" class="flex flex-row">
+            <section id="schedule" class="flex flex-column padding-block-lg padding-inline-md">
+                  <div id="title" class="flex flex-column">
+                        <h1 class="title-lg">Agende um atendimento</h1>
+                        <p class="text-sm">Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
+                  </div>
+
+                  <form class="flex flex-column">
+                        <div id="date-field" class="flex flex-column">
+                              <label for="data" class="title-md">Data</label>
+                              <div>
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    <input type="datetime" name="data" id="data">
+                                    <img src="assets/icons/arrow-down.svg" alt="">
+                              </div>
+                        </div>
+                        
+                        <div id="time-field" class="flex flex-column">
+                              <label for="time" class="title-md">Horários</label>
+                              
+                              <ul id="list-hours" class="flex flex-column">
+                                    <div class="flex flex-column">
+                                          <label class="text-sm">Manhã</label>
+                                          
+                                          <div class="flex flex-row">
+                                                <button class="text-md">09:00</button>
+                                                <button class="text-md">10:00</button>
+                                                <button class="text-md">11:00</button>
+                                                <button class="text-md">12:00</button>
+                                          </div>
+                                    </div>
+
+                                    <div class="flex flex-column">
+                                          <label class="text-sm">Tarde</label>
+                                          
+                                          <div class="flex flex-row">
+                                                <button class="text-md">13:00</button>
+                                                <button class="text-md">14:00</button>
+                                                <button class="text-md">15:00</button>
+                                                <button class="text-md">16:00</button>
+                                                <button class="text-md">17:00</button>
+                                                <button class="text-md">18:00</button>
+                                          </div>
+                                    </div>
+
+                                    <div class="flex flex-column">
+                                          <label class="text-sm">Noite</label>
+                                          
+                                          <div class="flex flex-row">
+                                                <button class="text-md">19:00</button>
+                                                <button class="text-md">20:00</button>
+                                                <button class="text-md">21:00</button>
+                                          </div>
+                                    </div>
+                              </ul>
+                        </div>
+
+                        <div id="client-field" class="flex flex-column">
+                              <label for="client" class="title-md">Cliente</label>
+                              <div>
+                                    <img src="assets/icons/person.svg" alt="">
+                                    <input type="text">
+                              </div>
+                        </div>
+
+                  </form>
+
+                  <button class="title-sm">Agendar</button>
+            </section>
+
+            <section id="agenda" class="flex flex-column padding-block-lg padding-inline-lg">
+                  <header class="flex flex-row">
+                        <div id="title" class="flex flex-column">
+                              <h1 class="title-lg">Sua agenda</h1>
+                              <p class="text-sm">Consulte os seus cortes de cabelo agendados por dia</p>
+                        </div>
+
+                        <div class="data-input">
+                              <img src="assets/icons/calendar.svg" alt="">
+                              <input type="date" name="date" id="date">
+                        </div>
+                  </header>
+
+                  <ul class="flex flex-column">
+                        <ul id="morning-agenda" class="flex flex-column">
+                              <header class="flex flex-row">
+                                    <div id="info-container" class="flex flex-row">
+                                          <img src="assets/icons/morning.svg" alt="">
+                                          <p class="text-sm">Manhã</p>
+                                    </div>
+                                    <p class="text-sm">09h-12h</p>
+                              </header>
+                              
+
+                              <div class="clients">
+                                    <p class="title-md">11:00</p>
+                                    <p class="text-md">Ryan Dorwart</p>
+                              </div>
+                        </ul>
+
+                        <ul id="afternoon-agenda" class="flex flex-column">
+                              <header class="flex flex-row">
+                                    <div id="info-container" class="flex flex-row">
+                                          <img src="assets/icons/morning.svg" alt="">
+                                          <p class="text-sm">Tarde</p>
+                                    </div>
+                                    <p class="text-sm">13h-18h</p>
+                              </header>
+                              <hr>
+                              <div class="clients">
+                                    <p class="title-md">11:00</p>
+                                    <p class="text-md">Ryan Dorwart</p>
+                              </div>
+                        </ul>
+                  </ul>
+            </section>
+      </div>
+</body>
+</html>
